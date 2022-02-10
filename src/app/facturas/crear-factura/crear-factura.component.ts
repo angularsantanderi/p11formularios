@@ -16,7 +16,8 @@ export class CrearFacturaComponent implements OnInit {
   ngOnInit(): void {
     this.formFactura = new FormGroup({
       nombreCliente: new FormControl('', [Validators.required, Validators.minLength(4)]),
-      cifCliente: new FormControl('', [Validators.required, ValidateCif])
+      cifCliente: new FormControl('', [Validators.required, ValidateCif]),
+      fechaFactura: new FormControl((new Date()).toISOString().substring(0,10))
     })
   }
 

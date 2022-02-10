@@ -37,6 +37,10 @@
                     </label>
                     <input type="text" formControlName="cifCliente" maxlength="9">
                 </div>
+                <div class="row column">
+                    <label>Fecha factura</label>
+                    <input type="date" formControlName="fechaFactura">
+                </div>
             </form>
             <pre>{{formFactura.value | json}}</pre>
             <pre>Formulario válido: {{formFactura.valid}}</pre>
